@@ -4,19 +4,17 @@ const products = [
     {id: 3, title: 'Keyboard', price: 200},
     {id: 4, title: 'Gamepad', price: 50},
 ];
-//Функция для формирования верстки каждого товара
-//Добавить в выводе изображение
-const renderProduct = (title, price) => {
+
+const renderProduct = (product, img='https://via.placeholder.com/200x150') => {
     return `<div class="product-item">
-                <h3>${title}</h3>
-                <p>${price}</p>
+                <img src="${img}">
+                <h3>${product.title}</h3>
+                <p>${product.price}</p>
                 <button class="buy-btn">Купить</button>
             </div>`
 };
 const renderPage = list => {
-    const productsList = list.map(item => renderProduct(item.title,item.price));
-    console.log(productsList);
-    document.querySelector('.products').innerHTML = productsList;
+    document.querySelector('.products').innerHTML = list.map(item => renderProduct(item)).join('');
 };
 
 renderPage(products);
