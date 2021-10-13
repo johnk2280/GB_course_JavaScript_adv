@@ -17,4 +17,5 @@ const renderPage = list => {
     document.querySelector('.products').innerHTML = list.map(item => renderProduct(item)).join('');
 };
 
+
 renderPage(products);
