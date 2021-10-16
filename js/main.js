@@ -5,6 +5,7 @@ const products = [
     {id: 4, title: 'Gamepad', price: 50},
 ];
 
+
 const renderProduct = (product, img='https://via.placeholder.com/200x150') => {
     return `<div class="product-item">
                 <img src="${img}">
