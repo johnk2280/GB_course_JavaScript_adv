@@ -98,7 +98,7 @@ class BasketItem {
     render(product, img='https://via.placeholder.com/50x50') {
         return `<div class="cart-item" data-id="${product.id_product}">
                     <div class="product-bio">
-                        <img src="${product.img}" alt="Some image">
+                        <img src="${img}" alt="Some image">
                         <div class="product-desc">
                             <p class="product-title">${product.product_name}</p>
                             <p class="product-quantity">Quantity: ${product.quantity}</p>
